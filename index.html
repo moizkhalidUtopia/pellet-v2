@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pellet.Pk - Sustainable Biomass Energy Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="img/favicon.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-pattern {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .elegant-shadow {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+        
+        .soft-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+        }
+        
+        .hover-scale {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(16, 185, 129, 0.15);
+        }
+        
+        .slide-up {
+            animation: slideUp 0.8s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .industrial-line {
+            position: relative;
+        }
+        
+        .industrial-line::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #10b981, #059669);
+            border-radius: 2px;
+        }
+        
+        .process-arrow::after {
+            content: '→';
+            position: absolute;
+            right: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #10b981;
+            font-size: 24px;
+            z-index: 99;
+        }
+        
+        .leaf-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10zm10 0c0-5.5-4.5-10-10-10s-10 4.5-10 10 4.5 10 10 10 10-4.5 10-10z' fill='%2310b981' fill-opacity='0.02'/%3E%3C/svg%3E");
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f0fdf4 100%);
+            border: 1px solid rgba(16, 185, 129, 0.1);
+        }
+        
+        .floating {
+            animation: floating 4s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+        }
+        
+        .industrial-icon {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 2px solid #10b981;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 nav-glass border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg">
+                        <i class="fas fa-leaf text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-bold text-gray-800">PELLET</span>
+                        <span class="text-2xl font-bold gradient-text" style="position: relative; left: -5px;">.PK</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-green-600 font-medium transition">Home</a>
+                    <a href="#about" class="text-gray-600 hover:text-green-600 font-medium transition">About</a>
+                    <a href="#process" class="text-gray-600 hover:text-green-600 font-medium transition">Process</a>
+                    <a href="#applications" class="text-gray-600 hover:text-green-600 font-medium transition">Applications</a>
+                    <a href="#sustainability" class="text-gray-600 hover:text-green-600 font-medium transition">Sustainability</a>
+                    <a href="#contact" class="text-gray-600 hover:text-green-600 font-medium transition">Contact</a>
+                </div>
+                <button class="md:hidden text-2xl text-gray-600" onclick="toggleMenu()">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="fixed inset-0 bg-white z-40 hidden">
+        <div class="flex flex-col items-center justify-center h-full space-y-8 text-xl">
+            <a href="#home" onclick="toggleMenu()" class="text-gray-600 hover:text-green-600 transition">Home</a>
+            <a href="#about" onclick="toggleMenu()" class="text-gray-600 hover:text-green-600 transition">About</a>
+            <a href="#process" onclick="toggleMenu()" class="text-gray-600 hover:text-green-600 transition">Process</a>
+            <a href="#applications" onclick="toggleMenu()" class="text-gray-600 hover:text-green-600 transition">Applications</a>
+            <a href="#sustainability" onclick="toggleMenu()" class="text-gray-600 hover:text-green-600 transition">Sustainability</a>
+            <a href="#contact" onclick="toggleMenu()" class="text-gray-600 hover:text-green-600 transition">Contact</a>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-20 hero-pattern">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="slide-up">
+                    <div class="inline-block px-4 py-2 bg-green-50 rounded-full mb-6">
+                        <span class="text-green-600 font-semibold">🌱 Sustainable Energy Solutions</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Transforming Agricultural Waste into 
+                        <span class="gradient-text">Clean Energy</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Pakistan produces 50 million tons of agricultural waste annually. We're converting this untapped resource into premium biomass pellets for a sustainable energy future.
+                    </p>
+                    <a class="flex flex-wrap gap-4" href="pdf/biomass-fuel-pakistan.pdf" target="_blank">
+                        <button class="px-8 py-4 bg-white border-2 border-green-500 text-green-600 rounded-xl font-semibold hover:bg-green-50 transition">
+                            <i class="fas fa-download mr-2"></i> Knowledge Booklet
+                        </button>
+                    </a>
+                </div
+                <div class="relative fade-in">
+                    <div class="relative mt-10">
+                        <div class="absolute inset-0 bg-gradient-to-br from-green-100 to-emerald-100 rounded-3xl transform rotate-6"></div>
+                        <img src="img/biomass-pellet.jpg" alt="Biomass Pellet Illustration" class="relative rounded-3xl shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Metrics Section -->
+    <section class="py-16 bg-gradient-to-b from-green-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="metric-card rounded-2xl p-6 text-center hover-scale">
+                    <i class="fas fa-seedling text-4xl text-green-600 mb-4"></i>
+                    <div class="text-3xl font-bold text-gray-900">50M</div>
+                    <div class="text-gray-600 mt-1">Tons Waste/Year</div>
+                </div>
+                <div class="metric-card rounded-2xl p-6 text-center hover-scale">
+                    <i class="fas fa-fire text-4xl text-green-600 mb-4"></i>
+                    <div class="text-3xl font-bold text-gray-900">90%</div>
+                    <div class="text-gray-600 mt-1">Energy Efficiency</div>
+                </div>
+                <div class="metric-card rounded-2xl p-6 text-center hover-scale">
+                    <i class="fas fa-leaf text-4xl text-green-600 mb-4"></i>
+                    <div class="text-3xl font-bold text-gray-900">Zero</div>
+                    <div class="text-gray-600 mt-1">Carbon Neutral</div>
+                </div>
+                <div class="metric-card rounded-2xl p-6 text-center hover-scale">
+                    <i class="fas fa-industry text-4xl text-green-600 mb-4"></i>
+                    <div class="text-3xl font-bold text-gray-900">24/7</div>
+                    <div class="text-gray-600 mt-1">Production</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 industrial-line inline-block">
+                    Industrial-Grade Biomass Solutions
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-8">
+                    Premium quality pellets manufactured to international standards for industrial and domestic applications
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 elegant-shadow hover-scale">
+                    <div class="w-16 h-16 industrial-icon rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-cubes text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Premium Raw Materials</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Agricultural residues: wheat straw, rice husk</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Wood waste: sawdust, wood chips</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Organic matter: sugarcane bagasse</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 elegant-shadow hover-scale">
+                    <div class="w-16 h-16 industrial-icon rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-certificate text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Quality Standards</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>High calorific value: 4000-4500 kcal/kg</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Low moisture content: &lt;10%</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Minimal ash content: &lt;3%</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 elegant-shadow hover-scale">
+                    <div class="w-16 h-16 industrial-icon rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-truck-loading text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Supply Chain Excellence</h3>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Bulk supply capabilities</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Reliable logistics network</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mr-2 mt-1"></i>
+                            <span>Customized packaging options</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Process Section -->
+    <section id="process" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 industrial-line inline-block">
+                    Manufacturing Process
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-8">
+                    State-of-the-art production facility ensuring consistent quality and output
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-5 gap-4">
+                <div class="relative bg-white rounded-xl p-6 text-center soft-shadow process-arrow">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-green-600 font-bold">1</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Collection</h4>
+                    <p class="text-sm text-gray-600">Sourcing & screening</p>
+                </div>
+                
+                <div class="relative bg-white rounded-xl p-6 text-center soft-shadow process-arrow">
+                    <div class="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-green-700 font-bold">2</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Crushing</h4>
+                    <p class="text-sm text-gray-600">High‑RPM size reduction</p>
+                </div>
+                
+                <div class="relative bg-white rounded-xl p-6 text-center soft-shadow process-arrow">
+                    <div class="w-12 h-12 bg-green-300 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-green-800 font-bold">3</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Drying</h4>
+                    <p class="text-sm text-gray-600">Moisture to ~8–15%</p>
+                </div>
+                
+                <div class="relative bg-white rounded-xl p-6 text-center soft-shadow process-arrow">
+                    <div class="w-12 h-12 bg-green-400 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-white font-bold">4</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">Pelleting</h4>
+                    <p class="text-sm text-gray-600">6–10 mm dies; cooling & screening</p>
+                </div>
+                
+                <div class="bg-white rounded-xl p-6 text-center soft-shadow">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                        <span class="text-white font-bold">5</span>
+                    </div>
+                    <h4 class="font-semibold text-gray-900 mb-2">QC & packaging</h4>
+                    <p class="text-sm text-gray-600">Batch specs & dispatch</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Applications Section -->
+    <section id="applications" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 industrial-line inline-block">
+                    Industry Applications
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-8">
+                    Serving diverse sectors with reliable, cost-effective energy solutions
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-white to-green-50 rounded-2xl p-8 border border-green-100 elegant-shadow">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-green-500 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-industry text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Industrial Sector</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <i class="fas fa-hard-hat text-green-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-900">Cement Plants</h4>
+                            <p class="text-sm text-gray-600 mt-1">High-temperature kilns</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <i class="fas fa-bolt text-green-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-900">Power Plants</h4>
+                            <p class="text-sm text-gray-600 mt-1">Electricity generation</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <i class="fas fa-tshirt text-green-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-900">Textile Mills</h4>
+                            <p class="text-sm text-gray-600 mt-1">Steam generation</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <i class="fas fa-pills text-green-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-900">Pharmaceuticals</h4>
+                            <p class="text-sm text-gray-600 mt-1">Process heating</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-white to-blue-50 rounded-2xl p-8 border border-blue-100 elegant-shadow">
+                    <div class="flex items-center mb-6">
+                        <div class="w-14 h-14 bg-blue-500 rounded-xl flex items-center justify-center mr-4">
+                            <i class="fas fa-home text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Commercial & Domestic</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg p-4">
+                            <i class="fas fa-hotel text-blue-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-900">Hotels</h4>
+                            <p class="text-sm text-gray-600 mt-1">Water heating</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <i class="fas fa-utensils text-blue-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-900">Restaurants</h4>
+                            <p class="text-sm text-gray-600 mt-1">Kitchen operations</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <i class="fas fa-fire-alt text-blue-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-900">Households</h4>
+                            <p class="text-sm text-gray-600 mt-1">Heating systems</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-4">
+                            <i class="fas fa-building text-blue-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-900">Offices</h4>
+                            <p class="text-sm text-gray-600 mt-1">Central heating</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sustainability Section -->
+    <section id="sustainability" class="py-20 leaf-pattern">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 industrial-line inline-block">
+                    Environmental Impact
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto mt-8">
+                    Contributing to Pakistan's sustainable development goals
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-12 elegant-shadow">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-recycle text-3xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Waste Valorization</h3>
+                        <p class="text-gray-600">Upcycles agricultural residues otherwise burned or dumped</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-cloud text-3xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Emission Reduction</h3>
+                        <p class="text-gray-600">Significantly lower CO2 emissions compared to fossil fuels</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-users text-3xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Job Creation</h3>
+                        <p class="text-gray-600">Supporting rural communities through collection and processing operations</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 p-8 bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl">
+                    <div class="grid md:grid-cols-4 gap-4 text-center">
+                        <div>
+                            <div class="text-3xl font-bold gradient-text">Local</div>
+                            <p class="text-gray-600 text-sm mt-1">Sourcing & logistics</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold gradient-text">100%</div>
+                            <p class="text-gray-600 text-sm mt-1">Renewable</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold gradient-text">24/7</div>
+                            <p class="text-gray-600 text-sm mt-1">Availability</p>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold gradient-text">Lower SOx</div>
+                            <p class="text-gray-600 text-sm mt-1">vs. coal (typ.)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-green-500 to-emerald-600">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-3xl p-12 text-center elegant-shadow">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Partner with Us for a <span class="gradient-text">Greener Tomorrow</span>
+                </h2>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    Join Pakistan's leading biomass energy revolution. Let's build a sustainable future together.
+                </p>
+                
+                <div class="flex flex-col md:flex-row gap-4 justify-center items-center mb-12">
+                    <a href="mailto:contact@pellet.pk" class="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition flex items-center">
+                        <i class="fas fa-envelope mr-3"></i>
+                        contact@pellet.pk
+                    </a>
+                </div>
+                
+                <div class="border-t pt-8">
+                    <p class="text-gray-600 mb-4">Download our comprehensive guide</p>
+                    <a class="px-6 py-3 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition" href="pdf/biomass-fuel-pakistan.pdf" target="_blank">
+                        <i class="fas fa-book mr-2"></i> Knowledge Booklet (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="py-12 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <span class="text-xl font-bold">PELLET.PK</span>
+                    </div>
+                    <p class="text-gray-400">Transforming agricultural waste into sustainable energy solutions.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-green-400 transition">About Us</a></li>
+                        <li><a href="#process" class="hover:text-green-400 transition">Our Process</a></li>
+                        <li><a href="#applications" class="hover:text-green-400 transition">Applications</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Industries</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Cement & Steel</li>
+                        <li>Textile Mills</li>
+                        <li>Power Plants</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400 mb-2">
+                        <i class="fas fa-envelope mr-2"></i> <a href="mailto:contact@pellet.pk">contact@pellet.pk</a>
+                    </p>
+                    <p class="text-gray-400">
+                        <i class="fas fa-map-marker-alt mr-2"></i> 
+                        Plot # Z-63 S.I.T.E Super Highway <br>
+                        Phase II, Karachi, Pakistan
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-400">© 2024 Pellet.PK. All rights reserved. | Building a Sustainable Pakistan</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+        
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.6s ease-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
